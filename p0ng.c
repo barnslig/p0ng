@@ -50,6 +50,17 @@ void ram(void) {
 	while(1) {
 
 		// check the points
+		// speed level check
+		if(points >= 20) {
+			speed = 14;
+		} else if(points >= 30) {
+			speed = 10;
+		} else if(points >= 40) {
+			speed = 6;
+		} else if(points >= 50) {
+			speed = 2;
+		}
+		// game over points check
 		if(points < minpoints) {
 			lcdClear();
 			lcdNl();
@@ -100,7 +111,11 @@ void ram(void) {
 				break;
 				
 			case BTN_LEFT:
+				points = 0;
+				
 				return;
+				
+				break;
 		};
 		
 		// wait for the right game speed
