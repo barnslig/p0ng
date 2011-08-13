@@ -1,0 +1,2 @@
+A simple singleplayer p0ng game for the r0ket. To compile it, just put it into the l0dables directory of the firmware 
+directory from the r0ket/r0ket git repo and type in "make".
